@@ -8,7 +8,7 @@
     "test": "echo lol",
     "lint": "vbuild --eslint",
     "dev": "vbuild -d",
-    "build": "vbuild && mv dist docs"
+    "build": "vbuild"
   },
   "devDependencies": {
     "offline-plugin": "^4.6.2",
