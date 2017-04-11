@@ -8,11 +8,11 @@
     "test": "echo lol",
     "lint": "vbuild --eslint",
     "dev": "vbuild -d",
-    "build": "vbuild"
+    "build": "vbuild && mv dist docs"
   },
   "devDependencies": {
-    "offline-plugin": "^4.6.1",
-    "vbuild": "^6.0.0"
+    "offline-plugin": "^4.6.2",
+    "vbuild": "^6.24.14"
   },
   "license": "MIT",
   "dependencies": {
