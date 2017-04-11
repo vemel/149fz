@@ -1,5 +1,6 @@
 const path = require('path')
 const OfflinePlugin = require('offline-plugin')
+const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 
 module.exports = options => ({
   entry: 'src/index.js',
@@ -11,6 +12,9 @@ module.exports = options => ({
     // inject offline-plugin in production build
     if (!options.dev) {
       config.output.publicPath = '';
+      config.output.path = path.resolve(__dirname, 'docs');
+
+      config.plugins.push(new WebpackCleanupPlugin())
       config.plugins.push(new OfflinePlugin({
         ServiceWorker: {
           events: true

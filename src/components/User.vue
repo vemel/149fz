@@ -102,7 +102,6 @@
 
         const userIds = Array.apply(null, Array(1000)).map((i, index) => index);
         this.userId = userIds.find(id => userIdToHash(companyName, id) === userHash) || 0;
-        console.log(userHash, userIds[0])
 
         const pageHash = this.$route.params.userPageHash;
         const pageIds = Array.apply(null, Array(1000)).map((i, index) => index);
